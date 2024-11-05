@@ -16,15 +16,10 @@ let package = Package(
             name: "RecordManagerFrameWork", // .xcframework 타겟 참조
             path: "Frameworks/RecordManagerFrameWork.xcframework" // .xcframework 경로
         ),
-        .binaryTarget(
-            name: "LogManager", // .xcframework 타겟 참조
-            path: "Frameworks/LogManager.xcframework" // .xcframework 경로
-        ),
         .target(
             name: "RecordManagerLibrary",
             dependencies: [
                 .target(name: "RecordManagerFrameWork"),
-                .target(name: "LogManager")
             ]
         ),
 
